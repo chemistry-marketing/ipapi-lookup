@@ -1,0 +1,24 @@
+{
+    "name": "seymourlabs/ipapi-lookup",
+    "type": "library",
+    "description": "IP lookup library for the ipapi.co service",
+    "keywords": [
+        "ip",
+        "json",
+        "lookup"
+    ],
+    "homepage": "https://github.com/seymourlabs/ipapi-lookup",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew Seymour",
+            "email": "git@seymourlabs.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Seymourlabs\\ipapi\\" : "src/" }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    }
+}
