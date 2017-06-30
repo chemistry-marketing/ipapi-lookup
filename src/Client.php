@@ -35,7 +35,7 @@ class Client
      * @param string $ipAddress User's IP Address
      * @param string $key Paid key
      */
-    public function __construct($ipAddress, $key)
+    public function __construct($ipAddress, $key = null)
     {
         $this->validateIP($ipAddress);
 
@@ -57,11 +57,25 @@ class Client
         }
     }
 
-    private function makeCall()
+    /**
+     * Make the request and inject into the Response
+     *
+     * @return Response
+     * @todo add better error handling
+     */
+    public function request()
     {
         $client = new \GuzzleHttp\Client([
             'base_uri' => $this->url
         ]);
+
+        // make request and process response
+        $response = $client->request('GET', $this->ipAddress . '/' . $this->format . (
+                !empty($this->key) ? '?key=' . $this->key : ''
+            )
+        );
+
+        return new Response($response);
     }
 
 }
