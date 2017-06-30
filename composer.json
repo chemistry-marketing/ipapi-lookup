@@ -19,6 +19,6 @@
         "psr-4": { "Seymourlabs\\ipapi\\" : "src/" }
     },
     "require": {
-        "guzzlehttp/guzzle": "^6.3"
+        "guzzlehttp/guzzle": "~6.0"
     }
 }
