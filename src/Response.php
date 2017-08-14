@@ -56,82 +56,23 @@ class Response
     }
 
     /**
-     * IP
+     * Retrieve relevant elements
+     *
+     * @param string $name
+     * @param $arguments
+     * @return null|string
      */
-    public function getIp()
+    public function __call($name, $arguments)
     {
-        return $this->IPResponse->ip;
-    }
+        // normalise
+        $name = str_replace('get', '', $name);
+        $name = strtolower($name);
 
-    /**
-     * City
-     */
-    public function getCity()
-    {
-        return $this->IPResponse->city;
-    }
-
-    /**
-     * Region
-     */
-    public function getRegion()
-    {
-        return $this->IPResponse->region;
-    }
-
-    /**
-     * Country
-     */
-    public function getCountry()
-    {
-        return $this->IPResponse->country;
-    }
-
-    /**
-     * Postal
-     */
-    public function getPostal()
-    {
-        return $this->IPResponse->postal;
-    }
-
-    /**
-     * Latitude
-     */
-    public function getLatitude()
-    {
-        return $this->IPResponse->latitude;
-    }
-
-    /**
-     * Longitude
-     */
-    public function getLongitude()
-    {
-        return $this->IPResponse->longitude;
-    }
-
-    /**
-     * Timezone
-     */
-    public function getTimezone()
-    {
-        return $this->IPResponse->timezone;
-    }
-
-    /**
-     * ASN
-     */
-    public function getAsn()
-    {
-        return $this->IPResponse->asn;
-    }
-
-    /**
-     * Organisation
-     */
-    public function getOrg()
-    {
-        return $this->IPResponse->org;
+        // match
+        if (isset($this->IPResponse->$name)) {
+            return $this->IPResponse->$name;
+        } else {
+            return null;
+        }
     }
 }
