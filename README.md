@@ -2,8 +2,8 @@
 
 **Perform IP lookups using the [ipapi.co](https://ipapi.co) service**
 
-[![Latest Stable Version](https://poser.pugx.org/seymourlabs/ipapi-lookup/version.png)](https://packagist.org/packages/seymourlabs/omnipay-invoice)
-[![Total Downloads](https://poser.pugx.org/seymourlabs/ipapi-lookup/d/total.png)](https://packagist.org/packages/seymourlabs/omnipay-invoice)
+[![Latest Stable Version](https://poser.pugx.org/seymourlabs/ipapi-lookup/version.png)](https://packagist.org/packages/seymourlabs/ipapi-lookup)
+[![Total Downloads](https://poser.pugx.org/seymourlabs/ipapi-lookup/d/total.png)](https://packagist.org/packages/seymourlabs/ipapi-lookup)
 
 ## Installation
 
